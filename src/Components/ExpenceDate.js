@@ -1,10 +1,10 @@
 import React from 'react'
 import "./ExpenceDate"
-function ExpenceDate() {
-    const expenseDate = new Date(2022, 9, 29);
-    const month = expenseDate.toLocaleString("ar-Tn", { month: "long" });
-    const day = expenseDate.toLocaleString("ar-EG", { day: "2-digit" });
-    const year = expenseDate.getFullYear();
+function ExpenceDate(props) {
+   console.log("from date",props.props)
+    const month = props.props.toLocaleString("ar-Tn", { month: "long" });
+    const day = props.props.toLocaleString("ar-EG", { day: "2-digit" });
+    const year = props.props.getFullYear();
   return (
     <div>
         <div className='expense-date__month'>{month}</div>
