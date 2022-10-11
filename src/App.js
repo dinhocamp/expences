@@ -1,4 +1,5 @@
-import Expenses from "./Components/Expenses";
+import Expenses from "../src/Components/Expences/Expenses";
+import NewExpense from "./Components/New expences/NewExpense";
 function App() {
   var expenses = [
     {id:"e1",
@@ -20,7 +21,7 @@ date:new Date(2021,7,28)
   console.log("from app",expenses)
   return (
     <div>
-      
+      <NewExpense />
       <Expenses props={expenses}/>
     </div>
   );
