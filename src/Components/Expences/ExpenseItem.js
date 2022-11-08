@@ -2,10 +2,9 @@ import React , {useState} from "react";
 import "./ExpenseItem.css";
 import ExpenceDate from "./ExpenceDate";
 function ExpenseItem(props) {
-  let [title,setTitle] = useState(props.props.props[0].title)
-  const expenseTitle = props.props.props[0].title;
-  const expensePrice = props.props.props[0].price;
-  console.log("exoence price",expensePrice)
+  let [title,setTitle] = useState(props.title)
+  const expenseTitle = props.title;
+  const expensePrice = props.price;
   const click=()=>{ 
     setTitle("new title");
     }
@@ -13,7 +12,7 @@ function ExpenseItem(props) {
   return (
     <div className="expense-item">
       <div>
-        <ExpenceDate props={props.props.props[0].date}/>
+        <ExpenceDate props={props.date}/>
       </div>
       <div className="expense-item__description ">
         <h2>{expenseTitle}</h2>
